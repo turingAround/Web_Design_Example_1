@@ -20,9 +20,9 @@
     --accent-color: #74b9ff;
     --text-color: #ffffff;          /* Light text for dark mode */
     --background-color: transparent;
-    --section-background: rgba(45, 45, 45, 0);
+    --section-background: rgba(45, 45, 45, 0.3);
     --nav-background: rgba(26, 26, 26, 0.95);
-    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     --nav-text-color: #ffffff;      /* Light text for navigation */
     --heading-color: #ffffff;       /* Light text for headings */
     --card-text-color: #ffffff;     /* Light text for cards */
@@ -245,6 +245,23 @@ nav a:hover::after {
     grid-template-columns: 1fr 2fr;
     gap: 4rem;
     align-items: start;
+    padding: 2rem;
+}
+
+.contact-info {
+    background-color: var(--section-background);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 100px;
+}
+
+.contact-form {
+    background-color: var(--section-background);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
 }
 
 /* Modern Form Styles */
