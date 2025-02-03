@@ -1,6 +1,7 @@
 # Web_Design_Example_1
 Version 1 of example website for portfolio.
 
+All Images will be from DeepAI.org unless otherwise noted.
 
 large parts of code were built from amazon Q, i'll do my best to attribute as follows:
 
