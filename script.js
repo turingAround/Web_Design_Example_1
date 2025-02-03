@@ -1,43 +1,12 @@
-// Theme toggling functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    
-    // Check for saved user preference, if any, on load of the website
-    const userPreference = localStorage.getItem('theme') || 
-                          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
-    // Set initial theme
-    document.documentElement.setAttribute('data-theme', userPreference);
-
-    // Listen for toggle button click
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        // Set new theme
-        document.documentElement.setAttribute('data-theme', newTheme);
-        // Save theme preference
-        localStorage.setItem('theme', newTheme);
-    });
-});
-
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// for contact form
-
-// Form handling for demo
 document.addEventListener('DOMContentLoaded', function() {
+    // Check for saved theme preference when page loads
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.body.classList.toggle('dark-mode', savedTheme === 'dark');
+    }
+
+    // Form handling for demo
     const contactForm = document.getElementById('contact-form');
-    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -55,31 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Dark mode toggle
-    function dark() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-    }
-
-    // Add click event listener to the theme toggle button
+    // Dark mode toggle with localStorage
     const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', dark);
-    }
-});
-
-
-    // Theme toggle 
-    const themeToggle = document.getElementById('theme-toggle');
-    
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            // Toggle dark mode class
+            document.body.classList.toggle('dark-mode');
             
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
+            // Save preference to localStorage
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
         });
     }
-
-
+});
