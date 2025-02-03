@@ -1,24 +1,31 @@
-/* Keep your existing root and dark mode variables at the top */
+/* Root variables (Light Mode) */
 :root {
     --primary-color: #2d3436;
     --accent-color: #0984e3;
-    --text-color: #2d3436;
-    --background-color: #ffffff;
-    --section-background: #f8f9fa;
+    --text-color: #2d3436;          /* Dark text for light mode */
+    --background-color: transparent;
+    --section-background: rgba(255, 255, 255, 0.8);
     --nav-background: rgba(255, 255, 255, 0.95);
     --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --max-width: 1200px;
     --section-padding: 5rem 2rem;
+    --nav-text-color: #2d3436;      /* Dark text for navigation */
+    --heading-color: #2d3436;       /* Dark text for headings */
+    --card-text-color: #2d3436;     /* Dark text for cards */
 }
 
+/* Dark mode variables */
 .dark-mode {
     --primary-color: #ffffff;
     --accent-color: #74b9ff;
-    --text-color: #ffffff;
-    --background-color: #1a1a1a;
-    --section-background: #2d2d2d;
+    --text-color: #ffffff;          /* Light text for dark mode */
+    --background-color: transparent;
+    --section-background: rgba(45, 45, 45, 0.8);
     --nav-background: rgba(26, 26, 26, 0.95);
     --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --nav-text-color: #ffffff;      /* Light text for navigation */
+    --heading-color: #ffffff;       /* Light text for headings */
+    --card-text-color: #ffffff;     /* Light text for cards */
 }
 
 /* Reset and base styles */
@@ -28,12 +35,69 @@
     box-sizing: border-box;
 }
 
+/* Body styles with light mode background */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Binary-DeepAi-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    transition: color 0.3s ease, background-image 0.3s ease;
+}
+
+/* Dark mode background */
+body.dark-mode {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/Binary-DeepAI-1.jpg');
+}
+
+/* Glass effect sections */
+.glass-effect {
+    background-color: var(--section-background);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Navigation links */
+nav a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+/* Project cards */
+.project-info h3 {
+    color: var(--heading-color);
+}
+
+.project-info p {
+    color: var(--text-color);
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    color: var(--text-color);
+}
+
+/* Contact form labels and text */
+.form-group label {
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    color: var(--text-color);
     background-color: var(--background-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid rgba(var(--text-color), 0.2);
 }
 
 /* Container for centering content */
@@ -503,4 +567,42 @@ footer {
         width: 100%;
         text-align: center;
     }
+}
+
+/* Footer text */
+footer p {
+    color: var(--text-color);
+}
+
+/* Project tags */
+.project-tags span {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Contact info text */
+.contact-info p {
+    color: var(--text-color);
+}
+
+/* CTA section text */
+.cta-content p {
+    color: var(--text-color);
+}
+
+/* Buttons */
+.primary-button {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--accent-color);
+}
+
+/* Project links */
+.project-link {
+    color: var(--accent-color);
 }
