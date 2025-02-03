@@ -11,6 +11,9 @@
     <!-- JavaScript link -->
     <script src="../../script.js" defer></script>
     
+    <!-- Google Fonts - Add Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <title>About Me - Portfolio</title>
 </head>
 <body>
@@ -20,7 +23,7 @@
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li class="theme-toggle">
                     <button id="theme-toggle" aria-label="Toggle dark mode">
                         <svg class="sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -45,18 +48,20 @@
 
     <main>
         <section class="about-hero">
-            <div class="about-container">
-                <h1>About Me</h1>
-                <div class="about-content">
-                    <div class="profile-image">
-                        <img src="images/profile-placeholder.jpg" alt="Profile Picture">
-                    </div>
-                    <div class="bio">
-                        <h2>Hi, I'm turingAround</h2>
-                        <p class="tagline">Web Designer & Developer</p>
-                        <p class="description">
-                            I specialize in creating beautiful, functional websites that help businesses achieve their goals. With 10 years of experience in Web Design, Development, Marketing and SEO, I bring creativity and technical expertise to every project.
-                        </p>
+            <div class="container">
+                <div class="about-content fade-in">
+                    <h1>About Me</h1>
+                    <div class="profile-section">
+                        <div class="profile-image">
+                            <img src="images/profile-placeholder.jpg" alt="Profile Picture" width="200" height="200">
+                        </div>
+                        <div class="bio">
+                            <h2>Hi, I'm turingAround</h2>
+                            <p class="tagline">Web Designer & Developer</p>
+                            <p class="description">
+                                I specialize in creating beautiful, functional websites that help businesses achieve their goals. With 10 years of experience in Web Design, Development, Marketing and SEO, I bring creativity and technical expertise to every project.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -66,31 +71,30 @@
             <div class="container">
                 <h2>My Skills</h2>
                 <div class="skills-grid">
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h3>Web Design</h3>
                         <ul>
                             <li>UI/UX Design</li>
                             <li>Responsive Design</li>
                             <li>Wordpress</li>
                             <li>Prototyping</li>
-                            <li>Completely Customizable</li>
                             <li>HTML5 & CSS3</li>
                             <li>JavaScript</li>
                             <li>React</li>
                             <li>Node.js</li>
                         </ul>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h3>Marketing</h3>
                         <ul>
                             <li>SEO</li>
                             <li>E-Mail Marketing</li>
                             <li>Affiliate Marketing</li>
                             <li>A/B Testing</li>
-                            <li>KPI and Metric Tracking and Reporting</li>    
+                            <li>KPI and Metric Tracking</li>
                         </ul>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h3>Tools</h3>
                         <ul>
                             <li>Resolve</li>
@@ -100,13 +104,13 @@
                             <li>Wireshark</li>
                         </ul>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card fade-in">
                         <h3>Media Service</h3>
                         <ul>
                             <li>Media Management</li>
-                            <li>Data Privacy & Securirity</li>
+                            <li>Data Privacy & Security</li>
                             <li>Video Editing</li>
-                            <li>Social Media Mangement</li>
+                            <li>Social Media Management</li>
                         </ul>
                     </div>
                 </div>
@@ -115,15 +119,19 @@
 
         <section class="contact-cta">
             <div class="container">
-                <h2>Let's Work Together</h2>
-                <p>Interested in collaborating? I'm always open to discussing new projects and opportunities.</p>
-                <a href="contact.html" class="cta-button">Get in Touch</a>
+                <div class="cta-content fade-in">
+                    <h2>Let's Work Together</h2>
+                    <p>Interested in collaborating? I'm always open to discussing new projects and opportunities.</p>
+                    <a href="contact.html" class="cta-button">Get in Touch</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 turingAround. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 turingAround. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
