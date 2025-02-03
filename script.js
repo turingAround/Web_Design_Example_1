@@ -33,7 +33,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // for contact form
-// Simple form handling for demo
+
+// Form handling for demo
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
     
@@ -41,29 +42,34 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form elements
             const submitButton = document.querySelector('.submit-btn');
-            
-            // Show loading state
             submitButton.innerHTML = 'Sending...';
             submitButton.disabled = true;
 
-            // Simulate sending (1.5 second delay)
             setTimeout(() => {
-                // Show demo success message
                 alert('Form submitted! (Demo - no data was actually sent)');
-                
-                // Reset form
                 contactForm.reset();
-                
-                // Reset button
                 submitButton.innerHTML = 'Send Message';
                 submitButton.disabled = false;
             }, 1500);
         });
     }
 
-    // Theme toggle (if you need it)
+    // Dark mode toggle
+    function dark() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+
+    // Add click event listener to the theme toggle button
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', dark);
+    }
+});
+
+
+    // Theme toggle 
     const themeToggle = document.getElementById('theme-toggle');
     
     if (themeToggle) {
@@ -75,4 +81,5 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('theme', newTheme);
         });
     }
-});
+
+
