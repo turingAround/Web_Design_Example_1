@@ -20,8 +20,8 @@
     --accent-color: #39FF14;
     --text-color: #ffffff;          /* Light text for dark mode */
     --background-color: transparent;
-    --section-background: rgba(45, 45, 45, 0.3);
-    --nav-background: rgba(26, 26, 26, 0.95);
+    --section-background: rgba(45, 45, 45, 0);
+    --nav-background: rgba(26, 26, 26, 0);
     --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     --nav-text-color: #ffffff;      /* Light text for navigation */
     --heading-color: #ffffff;       /* Light text for headings */
