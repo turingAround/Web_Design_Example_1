@@ -17,7 +17,7 @@
 /* Dark mode variables */
 .dark-mode {
     --primary-color: #ffffff;
-    --accent-color: #74b9ff;
+    --accent-color: #39FF14;
     --text-color: #ffffff;          /* Light text for dark mode */
     --background-color: transparent;
     --section-background: rgba(45, 45, 45, 0.3);
